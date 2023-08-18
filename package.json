@@ -1,31 +1,35 @@
 {
-  "name": "cm5",
+  "name": "cm6",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Codemirror 6 implementation",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm run clear:css && npm run build:css && concurrently -n 🔥,💗 \"npm run watch:app\" \"npm run watch:css\"",
-    "watch:app": "WAVEORB_PORT=5833 nodemon -e '*' -i dist -x waveorb serve",
+    "watch:app": "WAVEORB_PORT=5823 nodemon -e '*' -i dist -x waveorb serve",
     "watch:css": "sass --watch app/assets/scss/app.scss app/assets/css/build/app.css",
     "build:css": "sass app/assets/scss/app.scss app/assets/css/build/app.css",
     "build:css:min": "sass --style compressed --no-source-map app/assets/scss/app.scss app/assets/css/build/app.css",
     "clear:css": "rm -rf app/assets/css/build",
-    "build": "npm run clear:css && npm run build:css:min && waveorb build"
+    "build": "npm run clear:css && npm run build:css:min && waveorb build",
+    "pack": "node_modules/.bin/rollup -c rollup.config.mjs && cp ./editor.js app/assets/js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eldoy/cm5.git"
+    "url": "git+https://github.com/eldoy/cm6.git"
   },
   "author": "Vidar Eldøy <vidar@eldoy.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/eldoy/cm5/issues"
+    "url": "https://github.com/eldoy/cm6/issues"
   },
-  "homepage": "https://github.com/eldoy/cm5#readme",
+  "homepage": "https://github.com/eldoy/cm6#readme",
   "devDependencies": {
+    "waveorb": "^0.39.0",
     "concurrently": "^8.2.0",
     "sass": "^1.66.0",
-    "waveorb": "^0.39.0"
+    "codemirror": "^6.0.1",
+    "@codemirror/lang-javascript": "^6.1.9",
+    "rollup": "^3.28.0",
+    "@rollup/plugin-node-resolve": "^15.2.0"
   }
 }
