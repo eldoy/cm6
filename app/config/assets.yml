@@ -1,0 +1,18 @@
+bundle:
+  js:
+    - /js/haka.js
+    - /codemirror/lib/codemirror.js
+    - /codemirror/addon/mode/overlay.js
+    - /codemirror/mode/xml/xml.js
+    - /codemirror/mode/markdown/markdown.js
+    - /codemirror/mode/gfm/gfm.js
+    - /codemirror/mode/javascript/javascript.js
+    - /codemirror/mode/css/css.js
+    - /codemirror/mode/htmlmixed/htmlmixed.js
+    - /codemirror/mode/clike/clike.js
+    - /codemirror/mode/meta.js
+    - /codemirror/mode/yaml/yaml.js
+    - /js/app.js
+  css:
+    - /css/build/app.css
+    - /codemirror/lib/codemirror.css

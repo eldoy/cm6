@@ -1,0 +1,17 @@
+.CodeMirror {
+  font-family: monospace !important;
+  border: 1px solid #111 !important;
+}
+
+.CodeMirror-cursors {
+  visibility: visible !important;
+  position: relative;
+  top: 1px;
+  right: 2px;
+}
+
+.CodeMirror-cursor {
+  scale: 0.7;
+  border: 6px solid rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.1s ease;
+}

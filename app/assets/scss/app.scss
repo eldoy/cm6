@@ -1,0 +1,12 @@
+@import 'vcss.scss';
+
+textarea {
+  height: 300px;
+}
+
+main {
+  max-width: 750px;
+  margin: 2rem auto;
+}
+
+@import 'editor.scss';
